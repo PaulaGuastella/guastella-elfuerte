@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=}, initial-scale=1.0">
+    <title>Viviendas El Fuerte</title>
+    <link rel="shortcut icon" href="../img/logo2.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="body__contacto">
+    <header id="header">
+        <div class="logo__header">
+            <img src="../img/logo2.png" alt="logo viviendas el fuerte">
+        </div>
+        <!-- <div class="nombre__empresa">
+            <h1>Viviendas el Fuerte</h1>
+        </div> -->
+        <div class="contacto__menu">
+            <div class="contacto__header">
+                <!-- h3>At. al cliente: 0351-152726346</h3> -->
+                <img src="../img/iconfacebook.png" alt="Visitá Nuestro Facebook" >
+                <img src="../img/iconinstagram.png" alt="Visitá Nuestro Instagram">
+                <img src="../img/iconwhatsapp.png" alt="Escribenos al Whatsapp" >
+            </div>
+            <nav class="menu__navegacion">
+            <ul class="barra__nav">
+                <li> <a href="../index.html">Home</a></li>
+                <li> <a href="./promociones.html">Promociones</a></li>
+                <li> <a href="./modelos.html">Modelos</a></li>
+                <li> <a href="./nosotros.html">Nosotros</a></li>
+                <li> <a href="./contacto.html">Contacto</a></li>
+            </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="main__contacto">
+        <div class="formulario__contacto"> 
+        <h2>Dejanos tu consulta:</h2>
+
+        <form action="enviar.php" method="get" enctype="text/plain"><!-- esto procesa la info -->
+            <div class="contenedor__datos__personales">
+                <h3>Datos Personales:</h3>
+                <div class="datos__personales">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="Nombre" placeholder="Ingrese su Nombre" required>
+                </div>
+                <div class="datos__personales">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" placeholder="Ingrese su Apellido" required>
+                </div>
+                <div class="datos__personales">
+                    <label for="mail">Email</label>
+                    <input type="email" id="Mail" placeholder="Ingrese su Mail" required>
+                </div>
+                <div class="datos__personales">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" placeholder="Ingrese su Teléfono" required>
+                </div>
+            </div>
+            <div class="contenedor__datos__compra">
+                <div class="datos__compras">
+                    <h3>Actualmente alquila?</h3> 
+                    <div class="radio__button" >
+                        <input type="radio" name="alquiler" value="1"> Si
+                        <input type="radio" name="alquiler" value="2"> No
+                    </div>
+                </div>
+                <div class="datos__compras">
+                    <h3>Le interesan las viviendas de dos plantas?</h3>
+                    <div class="radio__button">
+                        <input type="radio" name="dos_plantas" value="1"> Si
+                        <input type="radio" name="dos_plantas" value="2"> No
+                    </div>
+    
+                </div>
+                <div class="datos__compras"> 
+                    <h3>Sobre qué tipología desea consultar?</h3>
+                    <div class="dato__tipologia">
+                        <div class="opciones__tipologias">
+                            <input type="checkbox" name="tipologia" id="tipologia" value="1">
+                            <p>Serrana</p>
+                        </div>
+                        <div class="opciones__tipologias">
+                            <input type="checkbox" name="tipologia" id="tipologia" value="2"> 
+                            <p>Cabaña</p>
+                        </div>
+                        <div class="opciones__tipologias">
+                            <input type="checkbox" name="tipologia" id="tipologia" value="3"> 
+                            <p>Premium</p>
+                        </div>
+                        <div class="opciones__tipologias">
+                            <input type="checkbox" name="tipologia" id="tipologia" value="3">
+                            <p>QB</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="datos__compras">
+                    <h3>Cuantas habitaciones tendrá su vivienda?</h3>
+                    <div class="datos__habitaciones">
+                        <div class="opcion__habitacion">
+                            <input type="radio" name="hab" id="hab" value="1">
+                            <p>1 Habilitación</p>
+                        </div>
+                        <div class="opcion__habitacion">
+                            <input type="radio" name="hab" id="hab" value="1">
+                            <p>2 Habilitaciones</p>
+                        </div>
+                        <div class="opcion__habitacion">
+                            <input type="radio" name="hab" id="hab" value="1">
+                            <p>3 Habilitaciones</p>
+                        </div>
+                        <div class="opcion__habitacion">
+                            <input type="radio" name="hab" id="hab" value="1">
+                            <p>+3 Habilitaciones</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="datos__compras">
+                    <h3>Seleccione la provincia dónde será instalada:</h3>
+                    <select name="provincia" id="provincia">
+                        <option value="0" selected>Seleccione provincia </option>
+                        <option value="1">Córdoba</option>
+                        <option value="2">Buenos Aires</option>
+                        <option value="3">Santa Fe</option>
+                        <option value="4">La Rioja</option>
+                        <option value="5">San Luis</option>
+                        <option value="6">San Juan</option>
+                        <option value="7">La Pampa</option>
+                        <option value="8">Santiago del Estero</option>
+                        <option value="9">Misiones</option>
+                        <option value="10">Corrientes</option>
+                        <option value="11">Chaco</option>
+                        <option value="12">Tucuman</option>
+                        <option value="13">Catamarca</option>
+                        <option value="14">Salta</option>
+                        <option value="15">Formosa</option>
+                        <option value="16">Santa Cruz</option>
+                        <option value="17">Chubut</option>
+                        <option value="18">Neuquen</option>
+                        <option value="19">Rio Negro</option>
+                        <option value="20">Mendoza</option>
+                        <option value="21">Tierra del Fuego</option>
+                        <option value="22">Entre Rios</option>
+                        <option value="23">Jujuy</option>
+                    </select>
+                </div>
+            </div>
+            <div class="contenedor__datos__libres">
+                <h3>Dejanos tus comentarios:</h3>
+                <label for="multi"></label>
+                <textarea name="multi" id="multi" cols="60" rows="10"></textarea>
+            </div>
+            <div class="contenedor__botones">
+                <div class="boton__enviar">
+                    <input type="submit" value="Enviar ahora">
+                </div>
+                <div class="boton__borrar">
+                    <input type="reset" value="Borrar todo">
+                </div>
+            </div>
+        </div>
+        <div class="imagen__contacto">
+            <img src="../img/familia-y-vivienda.jpg" alt="familia y vivienda">
+            <img src="../img/tipqb.jpeg" alt="vivienda QB">
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="copy">
+            <p>&copy;2022 Viviendas El Fuerte</p>
+        </div>
+        <div class="menu__nav__footer">
+            <ul class="barra__nav__footer">
+                <li> <a href="../index.html">Home</a></li>
+                <li> <a href="./promociones.html">Promociones</a></li>
+                <li> <a href="./modelos.html">Modelos</a></li>
+                <li> <a href="./nosotros.html">Nosotros</a></li>
+                <li> <a href="./contacto.html">Contacto</a></li>           
+            </ul>
+        </div>
+        <div class="contacto__footer">
+            <!-- <h3>Contacto</h3> -->
+            <img src="../img/iconfacebook.png" alt="Visitá Nuestro Facebook" width="50px">
+            <img src="../img/iconinstagram.png" alt="Visitá Nuestro Instagram" width="50px">
+            <img src="../img/iconwhatsapp.png" alt="Escribenos al Whatsapp" width="50px">
+        </div>
+    </footer>
+    
+</body>
+</html>
