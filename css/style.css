@@ -27,7 +27,7 @@ a {
     "main"
     "section"
     "footer";
-    grid-template-rows: 1fr 3fr 2fr 1fr;
+    grid-template-rows: 10vw auto auto 10vw;
     grid-template-columns: auto;
 }
 /* seccion header */
@@ -35,7 +35,6 @@ a {
     grid-area: header;
     width: 100%;
     gap: 5px;
-    height: 10vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -49,11 +48,10 @@ a {
     margin-left: 5vh;
 }
 .logo__header img{
-    width: 13   vw;
+    width: 13vw;
 }
 /* estilos de los enlaces a redes sociales */
 .contacto__menu{
-    grid-area: nav;
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
@@ -217,7 +215,6 @@ a {
 /* FOOTER */
 #footer{
     grid-area: footer;
-    height: 5vw;
     background: linear-gradient(to right,#789a23,#987965 );
     display: flex;
     justify-content: space-evenly;
@@ -260,7 +257,7 @@ a {
     }
     #presentacion__empresa {
         flex-direction: column;
-        height: 110vw;
+        height: 120vw;
         justify-content: center;
     }
     #presentacion__empresa .foto__principal {
@@ -269,7 +266,6 @@ a {
         margin: 2vw;
     }
     #presentacion__empresa .listado__fortalezas {
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
@@ -288,7 +284,7 @@ a {
         justify-content: space-evenly;
     }
     #footer {
-        height: 15vw;
+        height: 20vw;
         flex-direction: column;
     }
 
@@ -305,6 +301,7 @@ a {
         width: 70%;
     }
     #header .contacto__menu .contacto__header img{
+        align-self: center;
         width: 8vw;
         height: 8vw;
     }
@@ -314,14 +311,33 @@ a {
         font-weight: bold;
     }
     #presentacion__empresa {
-        height: 180vw;
+        height: 300vw;
+        align-items:center;
+    }
+    #presentacion__empresa .foto__principal{
+        margin: 0;
+        width: 85vw;
+        border: 2vw solid black;
+        background-color: black;
+    }
+    #presentacion__empresa .foto__principal img{
+        align-content: center;
+        width: 80vw;
+        height: 80vw;
+    }
+    #presentacion__empresa .listado__fortalezas {
+        display: flex;
+        flex-direction: row;
+        gap: 3vw;
     }
     #presentacion__empresa .listado__fortalezas .cada__fortaleza {
         width: 40vw;
-        height: 20vw;
+        height: 25vw;
     }
     #presentacion__empresa .listado__fortalezas .cada__fortaleza p{
         font-size: 3vw;
+        width: 60vw;
+
     }
     #promociones {
         height: 330vw;
@@ -336,300 +352,6 @@ a {
     #footer {
         height: 20vw;
     }
-}
-
-
-.body__promo {
-    background-image: url('../img/fondo-promociones.jpg');
-}
-
-.body__contacto {
-    background-image: url('../img/fondo-contacto.jpeg');
-}
-.body__nosotros {
-    background-image: none;
-    background-color: #ffffff;
-}
-.body__modelos {
-    background-image: none;
-    background-color: #789a23;
-}
-
-.formulario__contacto {
-    background-image: url('../img/fondo-contacto.jpeg');
-    color: #000000;
-    width: 500px;
-    border: 7px solid #000000;
-    
-}
-.formulario__contacto h2 {
-    margin: 10px;
-    text-align: center;
-}
-
-.imagen__contacto {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.imagen__contacto img{
-width: 1000px;
-height: auto;
-
-}
-
-.contenedor__datos__personales {
-    display: flex;
-    flex-direction: column  ;
-    margin-bottom: 10px;
-    margin-left: 10px;
-}
-.datos__personales {
-    margin: 5px;
-    display: flex;
-    justify-content:space-between;
-}
-
-.datos__personales input {
-    width: 250px;
-    padding: 5px;
-}
-
-.contenedor__datos__compra {
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    gap:15px
-}
-
-.datos__compras {
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-}
-
-.datos__compras h3 {
-    margin: 10px;
-}
-
-.radio__button {
-    display: flex;
-    gap: 10px;
-    justify-content:flex-start;
-}
-
-/* .radio__button input {
-    padding: 10px;
-    margin: 10px;
-} */
-.contenedor__datos__libres {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 10px;
-}
-
-.contenedor__botones {
-    margin: 10px;
-    display: flex;
-}
-
-.contenedor__botones input {
-    margin: 10px;
-    padding: 10px;
-    color: #ffffff;
-}
-
-.boton__enviar input{
-    background-color: #789a23;
-}
-.boton__enviar input:hover{
-    opacity: 50%;
-}
-.boton__borrar input{
-    background-color: red;
-}
-.boton__borrar input:hover{
-    opacity: 50%;
-}
-
-.dato__tipologia {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-items: auto;
-}
-
-.opciones__tipologias {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 6px;
-}
-
-.opciones__tipologias input {
-    background-color: aquamarine;
-}
-
-.datos__habitaciones{
-    display: flex;
-    flex-direction: column;
-}
-.opcion__habitacion {
-    display: flex;
-    padding: 5px;
-}
-/* modelos */
-.menu__modelos {
-    border: 5px solid #ffffff;
-}
-
-.menu__modelos h2 {
-    text-align: center;
-    background-color: #000000;
-    color: #ffffff;
-    height: 50px;
-}
-
-.tipologias {
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-    justify-content: space-between;
-}
-.imagen__modelos {
-    border: 4px solid beige;
-}
-.imagen__modelos img{
-    width: 800px;
-    height: 100%;
-}
-
-.caracteristicas__modelo {
-    background-image: url('../img/modelos__caracteristicas.jpeg');
-    width: 650px;
-    border: 4px solid beige;
-}
-.caracteristicas__modelo h4 {
-    text-align: center;
-    color: #ffffff;
-    font-size: 30px;
-}
-
-.nuestras__sucursales h2{
-    color: #ffffff;
-    background-color: #789a23;
-    margin: 5px;
-    text-align: center;
-    font-size: 30px;
-}
-
-.nuestras__sucursales h3{
-    color: #ffffff;
-    margin: 5px;
-}
-.especificaciones {
-    color: #ffffff;
-    margin-left: 10px;
-    padding: 30px;
-    font-size: 20px;
-}
-/* nosotros */
-.sucursales {
-    display: flex;
-    flex-direction: row;
-    justify-content:space-evenly;
-    gap: 100px;
-    background-color: #789a23;
-    margin: 5px;
-}
-
-.sucursal__map {
-    width: 600px;
-    margin: 5px;
-}
-
-.nosotros h2 {
-    color: #ffffff;
-    background-color: #789a23;
-    margin: 5px;
-    text-align: center;
-    font-size: 30px;
-}
-
-
-.nosotros iframe {
-    width: 800px;
-    height: 600px;
-}
-
-.video__institucional {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #789a23;
-    margin: 5px;
-    height: 700px;
-}
-
-.footer__nosotros {
-    margin-top: 5px;
-}
-
-.seccion__promociones {
-    height: 100%;
-    margin: 0px;
-}
-
-.promo__caracteristicas {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    width: auto;
-    margin: 10px 10px;
-}
-
-.promo__img {
-    margin: 20px;
-    border: 5px solid white;
-    
-}
-
-.promo__texto {
-    margin: 20px;
-    background-color: #789a23;
-    border: 3px solid #ffffff;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.promo__texto h2{
-    margin: 10px auto;
-}
-.promo__texto li {
-    list-style: url('../img/tilde.png');
-    width: 300px;
-}
-
-.listado__promo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 300px;
-}
-.promo__img  img{
-    width: 600px;
-}
-.main__contacto {
-    display: flex;
-    margin: 10px;
-    gap: 7px;
 }
 
 

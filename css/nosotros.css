@@ -1,0 +1,293 @@
+/* reseteo general */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+/* saco estilo a todos los li */
+ul li {
+    list-style: none;
+}
+/* saco estilo a todos los link */
+a {
+    text-decoration: none;
+}
+/* PAGINA NOSOTROS */
+.body__nosotros {
+    background-image: url(../img/fondo-nosotros-2.jpeg);
+    display: grid;
+    gap: 5vw;
+    grid-template-areas: 
+    "header"
+    "sucursales"
+    "nosotros"
+    "footer";
+    grid-template-rows: 10vw 60vw 85vw 10vw;
+    grid-template-columns: 100%;
+}
+/* seccion header */
+#header {
+    grid-area: header;
+    width: 100%;
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(to right,#ffffff,#789a23 );
+}
+/* estilos del logo */
+.logo__header {
+    width: 30%;
+    height: 5vw;
+    align-self: center;
+    margin-left: 5vh;
+}
+.logo__header img{
+    width: 13vw;
+}
+/* estilos de los enlaces a redes sociales */
+.contacto__menu{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    width: 60%;
+}
+.contacto__menu .contacto__header {
+    align-self: flex-end;
+    justify-content: space-evenly;
+    margin-right: 1vw;
+}
+.contacto__menu .contacto__header img {
+    width: 3.2vw;
+    height: 3.2vw;
+    margin: 1vw;
+}
+.contacto__menu .contacto__header img:hover {
+    opacity: 50%;
+    cursor: pointer;
+    width: 4vw;
+    height: 4vw;
+}
+/* menú de navegación */
+.menu__navegacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu__navegacion .barra__nav{
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    margin-right: 2vw;
+    
+}
+.menu__navegacion .barra__nav a{
+    color: white;
+    padding: 0.8vw;
+    text-transform: uppercase;
+    font-size: 1.4vw;
+    display: inline-block;
+    transition: all 560ms;
+}
+.menu__navegacion .barra__nav a:hover {
+    opacity: 50%;
+    cursor: pointer;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.8vw;
+}
+/* Sucursales */
+.nuestras__sucursales {
+    grid-area: sucursales;
+    margin: 5vw;
+}
+.nuestras__sucursales h2{
+    color: #000000;
+    margin: 1vw;
+    margin-bottom: 3vw;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 5vw;
+    letter-spacing: 0.3vw;
+}
+
+.nuestras__sucursales h3{
+    color: #000000;
+    font-size: 3vw;
+    text-transform: uppercase;
+    margin: 1vw;
+}
+.sucursales {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    gap: 10vw;
+    margin: 1vw;
+}
+.sucursal__map {
+    border: 0.3vw dotted black;
+    height: 45vw;
+    width: 60vw;
+    margin: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+}
+.sucuesal__map p {
+    font-size: 1.5vw;
+    text-align: center;
+}
+.sucursal__map iframe{
+    width: 35vw;
+    height: 25vw;
+}
+/* Nosotros */
+.nosotros {
+    grid-area: nosotros;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nosotros h2 {
+    color: #000000;
+    margin: 1vw;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 5vw;
+    letter-spacing: 0.3vw;
+}
+.sobre__nosotros {
+    width: 80vw;
+}
+.sobre__nosotros p{
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 2.5vw;
+}
+.sobre__nosotros span{
+    font-weight: bold;
+    font-size: 2vw;
+}
+.video__institucional {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3vw auto;
+}
+.video__institucional iframe {
+    height: 40vw;
+    width: 50vw;
+}
+/* FOOTER */
+#footer{
+    grid-area: footer;
+    background: linear-gradient(to right,#789a23,#987965 );
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: flex-end;
+}
+#footer .copy{
+    color: #ffffff;
+    margin-right: 4vw;
+    display: inline-block;
+    justify-content: flex-start;
+}
+#footer .barra__nav__footer {
+    display: flex;
+    gap: 0.5vw;
+}
+#footer .barra__nav__footer li a{
+    display: inline-block;
+    color: #ffffff;
+    padding: 0.5vw;
+}
+#footer .barra__nav__footer li a:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+.contacto__footer img{
+    width: 6vh;
+    margin: 1vw;
+}
+.contacto__footer img:hover {
+    opacity: 50%;
+    cursor: pointer;
+    width: 8vh;
+}
+@media screen and (max-width: 768px) {
+    .body__nosotros {
+        grid-template-rows: 20vw 155vw 120vw 20vw;
+    }
+    #header .logo__header img {
+        width: 15vw;
+    }
+    #header .contacto__header img {
+        width: 4vw;
+        height: 4vw;
+    }
+    .contacto__menu .contacto__header img:hover {
+        width: 4.3vw;
+        height: 4.3vw;
+    }
+    #header .barra__nav li a{
+        font-size: 2.3vw;
+        color: black;
+        font-weight: bold;
+    }
+    .nuestras__sucursales {
+        margin: 2vw;
+    }
+    .sucursales {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sucursal__map{
+        width: 80vw;
+        height: 65vw;
+    }
+    .sucursal__map iframe{
+        width: 55vw;
+        height: 45vw;
+    }
+    .sobre__nosotros p {
+        font-size: 2vw;
+    }
+    .video__institucional iframe {
+        width: 80vw;
+        height: 60vw;
+    }
+    #footer {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:481px){
+    .body__nosotros {
+        grid-template-rows: 20vw 170vw 190vw 20vw;
+    }
+    .sucursal__map{
+        height: 80vw;
+        width: 85vw;
+    }
+    .sobre__nosotros {
+        height: 90vw;
+    }
+    .sobre__nosotros p {
+        font-size: 3vw;
+        height: 40vw;
+        line-height: 4vw;
+        
+    }
+    .segundo__parrafo {
+        height: 60vw;
+    }
+    .span{
+        font-size: 4vw;
+    }
+    .video__institucional {
+        margin-top: 15vw;
+    }
+}
