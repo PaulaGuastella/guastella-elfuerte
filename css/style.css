@@ -20,7 +20,7 @@ a {
     background-image: url(../img/pexels-pixabay-301717.jpg);
     margin: 0 0;
     height: 100vw;
-    gap: 5px;
+    gap: 5vw;
     display: grid;
     grid-template-areas: 
     "header"
@@ -252,8 +252,11 @@ a {
 /* APLICANDO RESPONSIVE A INDEX*/
 /* tamaño tablet */
 @media screen and (max-width: 768px) {
+    #body__index {
+        grid-template-rows: 20vw 150vw 100vw 30vw;
+    }
     #header .logo__header img {
-        width: 10vw;
+        width: 15vw;
     }
     #presentacion__empresa {
         flex-direction: column;
@@ -291,6 +294,9 @@ a {
 }
 /* tamaño celular */
 @media screen and (max-width:481px) {
+    #body__index{
+        grid-template-rows: 20vw 300vw 360vw 30vw;
+    }
     #header {
         height: 20vw;
     }
@@ -311,7 +317,7 @@ a {
         font-weight: bold;
     }
     #presentacion__empresa {
-        height: 320vw;
+        height: 300vw;
         align-items:center;
     }
     #presentacion__empresa .foto__principal{
@@ -350,7 +356,7 @@ a {
         height: 70vw;
     }
     #footer {
-        height: 20vw;
+        height: 30vw;
     }
 }
 

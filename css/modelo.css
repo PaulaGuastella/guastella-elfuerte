@@ -18,6 +18,7 @@ a {
     background-image: none;
     background: linear-gradient(to right,#987965,#789a23 );
     display: grid;
+    gap: 5vw;
     grid-template-areas: 
     "header"
     "menu"

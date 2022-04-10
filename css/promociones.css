@@ -222,7 +222,7 @@ a {
 }
 @media screen and (max-width:481px) {
     #body__promo{
-        grid-template-rows: 20vw 690vw 20vw;
+        grid-template-rows: 20vw 690vw 30vw;
     }
     .logo__header img{
         width: 15vw;
@@ -253,5 +253,8 @@ a {
     .promo__texto .listado__promo li {
         width: 50vh;
         margin-left: 7vw;
+    }
+    #footer {
+        height: 30vw;
     }
 }
