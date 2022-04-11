@@ -226,7 +226,7 @@ a {
     width: 100%;
 }
 .imagen__contacto img:hover{
-    opacity: 80%;
+    opacity: 70%;
     cursor: pointer;
 }
 /* FOOTER */
