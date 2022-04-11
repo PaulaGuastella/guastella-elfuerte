@@ -28,34 +28,36 @@ a {
     "section"
     "footer";
     grid-template-rows: 10vw auto auto 10vw;
-    grid-template-columns: auto;
+    grid-template-columns: 100%;
 }
 /* seccion header */
 #header {
-    grid-area: header;
-    width: 100%;
-    gap: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background: linear-gradient(to right,#ffffff,#987965 );
+    background: linear-gradient(to right,#789a23,#987965 );
+} 
+/* aplicando estilos sobre grid */
+
+.navbar-collapse{
+    justify-content: end;
+
 }
-/* estilos del logo */
-.logo__header {
-    width: 30%;
-    height: 5vw;
-    align-self: center;
-    margin-left: 5vh;
+.navbar-nav{
+    background: linear-gradient(to right,#789a23,#987965 );
 }
-.logo__header img{
-    width: 13vw;
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 1.3vw;
+    margin: 0.5vw;
+}
+.navbar-light .navbar-nav .nav-link.active {
+    color:#ffffff;
+    font-weight: bold;
 }
 /* estilos de los enlaces a redes sociales */
 .contacto__menu{
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
-    width: 60%;
+    width: 25%;
 }
 .contacto__menu .contacto__header {
     align-self: flex-end;
@@ -65,41 +67,13 @@ a {
 .contacto__menu .contacto__header img {
     width: 3.2vw;
     height: 3.2vw;
-    margin: 1vw;
+    margin: 2vw;
 }
 .contacto__menu .contacto__header img:hover {
     opacity: 50%;
     cursor: pointer;
     width: 4vw;
     height: 4vw;
-}
-/* menú de navegación */
-.menu__navegacion {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.menu__navegacion .barra__nav{
-    display: flex;
-    justify-content: flex-end;
-    align-content: flex-end;
-    margin-right: 2vw;
-    
-}
-.menu__navegacion .barra__nav a{
-    color: white;
-    padding: 0.8vw;
-    text-transform: uppercase;
-    font-size: 1.4vw;
-    display: inline-block;
-    transition: all 560ms;
-}
-.menu__navegacion .barra__nav a:hover {
-    opacity: 50%;
-    cursor: pointer;
-    color: #000000;
-    font-weight: bold;
-    font-size: 1.8vw;
 }
 
 /* SECCION PRESENTACION */
@@ -223,6 +197,7 @@ a {
 }
 #footer .copy{
     color: #ffffff;
+    font-size: 1.5vw;
     margin-right: 4vw;
     display: inline-block;
     justify-content: flex-start;
@@ -234,39 +209,45 @@ a {
 #footer .barra__nav__footer li a{
     display: inline-block;
     color: #ffffff;
+    font-size: 1.5vw;
     padding: 0.5vw;
 }
 #footer .barra__nav__footer li a:hover {
     opacity: 50%;
     cursor: pointer;
 }
-.contacto__footer img{
-    width: 6vh;
-    margin: 1vw;
+.contacto__footer{
+    display: flex;
+    gap: 1.5vw;
 }
-.contacto__footer img:hover {
+.bi {
+    font-size: 3vw;
+    color: black;
+}
+.bi:hover {
+    font-size: 3.2vw;
+    color: black;
     opacity: 50%;
-    cursor: pointer;
-    width: 8vh;
 }
 /* APLICANDO RESPONSIVE A INDEX*/
 /* tamaño tablet */
 @media screen and (max-width: 768px) {
     #body__index {
-        grid-template-rows: 20vw 150vw 100vw 30vw;
-    }
-    #header .logo__header img {
-        width: 15vw;
+        grid-template-rows: 20vw 130vw 80vw 30vw;
+        gap: 10vw;
     }
     #presentacion__empresa {
         flex-direction: column;
         height: 120vw;
         justify-content: center;
+        align-items: center;
     }
     #presentacion__empresa .foto__principal {
-        align-self: center;
         width: 100%;
         margin: 2vw;
+    }
+    #presentacion__empresa .foto__principal img {
+        align-self: center;
     }
     #presentacion__empresa .listado__fortalezas {
         flex-direction: row;
@@ -289,6 +270,19 @@ a {
     #footer {
         height: 20vw;
         flex-direction: column;
+        justify-content: center;
+    }
+    #footer .copy p {
+        font-size: 2.2vw;
+    }
+    #footer .barra__nav__footer li a{
+        font-size: 2.2vw;
+    }
+    #footer .contacto__footer{
+        gap: 3vw;
+    }
+    #footer .contacto__footer i {
+        font-size: 4vw;
     }
 
 }
@@ -311,11 +305,20 @@ a {
         width: 8vw;
         height: 8vw;
     }
+    #header .contacto__menu .menu__navegacion .barra__nav{
+        height: 3vw;
+        width: 10vw;
+    }
     #header .contacto__menu .menu__navegacion a{
         font-size: 2.5vw;
         color: black;
         font-weight: bold;
-        padding: 2vw;
+        padding: 3vw;
+    }
+    #header .contacto__menu .menu__navegacion a:hover{
+        font-size: 3vw;
+        color: #ffffff;
+        font-weight: bold;
     }
     #presentacion__empresa {
         height: 300vw;
