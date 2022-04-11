@@ -208,7 +208,7 @@ a {
     background-color: #789a23;
 }
 .boton__enviar input:hover{
-    opacity: 50%;
+    opacity: 80%;
 }
 .boton__borrar input{
     background-color: #ea4322;
@@ -224,6 +224,10 @@ a {
 }
 .imagen__contacto img{
     width: 100%;
+}
+.imagen__contacto img:hover{
+    opacity: 80%;
+    cursor: pointer;
 }
 /* FOOTER */
 #footer{
