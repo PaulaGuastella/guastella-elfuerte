@@ -268,7 +268,7 @@ a {
 /* tamaño tablet */
 @media screen and (max-width: 768px) {
     #body__index {
-        grid-template-rows: 20vw 130vw 80vw 30vw;
+        grid-template-rows: 18vw 130vw 80vw 30vw;
         gap: 10vw;
     }
     #header {
