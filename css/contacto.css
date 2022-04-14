@@ -305,11 +305,7 @@ a {
     .navbar-light .navbar-nav .nav-link {
         color: #ffffff;
         font-size: 2vw;
-        margin: 0.5vw;
     } 
-    .navbar-light .navbar-nav .nav-link.active {
-        font-weight: bold;
-    }
     .main__contacto {
         flex-direction: column;
     }

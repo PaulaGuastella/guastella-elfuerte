@@ -23,35 +23,75 @@ a {
     "sucursales"
     "nosotros"
     "footer";
-    grid-template-rows: 10vw 60vw 85vw 10vw;
+    grid-template-rows: 15vw 60vw 90vw 10vw;
     grid-template-columns: 100%;
 }
 /* seccion header */
 #header {
     grid-area: header;
-    width: 100%;
-    gap: 5px;
+    background: linear-gradient(to left,#789a23,#ffffff );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.logo__contacto{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background: linear-gradient(to right,#ffffff,#789a23 );
+    height: 10vw;
 }
-/* estilos del logo */
-.logo__header {
-    width: 30%;
-    height: 5vw;
+.logo {
+    width: 15vw;
     align-self: center;
-    margin-left: 5vh;
+    margin-left: 3vw;
 }
-.logo__header img{
-    width: 13vw;
+.logo img {
+    width: 10vw;
+    height: 7vw;
+}
+.contacto__header{
+    display: flex;
+    gap: 1.5vw;
+    width: 20vw;
+    align-items: center;
+}
+.bi {
+    font-size: 3vw;
+    color: black;
+}
+.bi:hover {
+    font-size: 3.2vw;
+    color: black;
+    opacity: 50%;
+}
+/* NAV BAR */
+.navbar-collapse{
+    justify-content: end;
+    width: 100%;
+    padding: 0%;
+}
+.navbar-nav{
+    background: linear-gradient(to left,#789a23,#ffffff );
+    width: 100%;
+    margin: 0;
+    padding: 0;
+} 
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+    font-size: 1.3vw;
+    margin: 0.5vw;
+} 
+.navbar-light .navbar-nav .nav-link.active {
+    color:#000;
+    font-weight: bold;
 }
 /* estilos de los enlaces a redes sociales */
 .contacto__menu{
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
-    width: 60%;
+    width: 25%;
 }
 .contacto__menu .contacto__header {
     align-self: flex-end;
@@ -61,41 +101,13 @@ a {
 .contacto__menu .contacto__header img {
     width: 3.2vw;
     height: 3.2vw;
-    margin: 1vw;
+    margin: 2vw;
 }
 .contacto__menu .contacto__header img:hover {
     opacity: 50%;
     cursor: pointer;
     width: 4vw;
     height: 4vw;
-}
-/* menú de navegación */
-.menu__navegacion {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.menu__navegacion .barra__nav{
-    display: flex;
-    justify-content: flex-end;
-    align-content: flex-end;
-    margin-right: 2vw;
-    
-}
-.menu__navegacion .barra__nav a{
-    color: white;
-    padding: 0.8vw;
-    text-transform: uppercase;
-    font-size: 1.4vw;
-    display: inline-block;
-    transition: all 560ms;
-}
-.menu__navegacion .barra__nav a:hover {
-    opacity: 50%;
-    cursor: pointer;
-    color: #000000;
-    font-weight: bold;
-    font-size: 1.8vw;
 }
 /* Sucursales */
 .nuestras__sucursales {
@@ -104,6 +116,7 @@ a {
 }
 .nuestras__sucursales h2{
     color: #000000;
+    text-shadow: 2px 2px 2px #ffffff;
     margin: 1vw;
     margin-bottom: 3vw;
     text-align: center;
@@ -114,6 +127,7 @@ a {
 
 .nuestras__sucursales h3{
     color: #000000;
+    text-shadow: 2px 2px 2px #ffffff;
     font-size: 3vw;
     text-transform: uppercase;
     margin: 1vw;
@@ -152,6 +166,7 @@ a {
 }
 .nosotros h2 {
     color: #000000;
+    text-shadow: 2px 2px 2px #ffffff;
     margin: 1vw;
     text-align: center;
     text-transform: uppercase;
@@ -169,6 +184,7 @@ a {
 .sobre__nosotros span{
     font-weight: bold;
     font-size: 2vw;
+    text-shadow: 2px 2px 2px #ffffff;
 }
 .video__institucional {
     display: flex;
@@ -183,14 +199,14 @@ a {
 /* FOOTER */
 #footer{
     grid-area: footer;
-    background: linear-gradient(to right,#789a23,#987965 );
+    background: linear-gradient(to left,#789a23,#ffffff );
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     align-content: flex-end;
 }
 #footer .copy{
-    color: #ffffff;
+    color: #000000;
     margin-right: 4vw;
     display: inline-block;
     justify-content: flex-start;
@@ -201,42 +217,54 @@ a {
 }
 #footer .barra__nav__footer li a{
     display: inline-block;
-    color: #ffffff;
+    color: #000000;
+    font-size: 1.5vw;
     padding: 0.5vw;
 }
 #footer .barra__nav__footer li a:hover {
     opacity: 50%;
     cursor: pointer;
 }
-.contacto__footer img{
-    width: 6vh;
-    margin: 1vw;
+.contacto__footer{
+    display: flex;
+    gap: 1.5vw;
 }
-.contacto__footer img:hover {
+.bi {
+    font-size: 3vw;
+    color: black;
+}
+.bi:hover {
+    font-size: 3.2vw;
+    color: black;
     opacity: 50%;
-    cursor: pointer;
-    width: 8vh;
 }
 @media screen and (max-width: 768px) {
     .body__nosotros {
-        grid-template-rows: 20vw 155vw 120vw 20vw;
+        grid-template-rows: 20vw 155vw 120vw 25vw;
+        grid-template-column: 100%;
+        gap: 15vw;
     }
-    #header .logo__header img {
+    #header {
+        flex-direction: row-reverse;
+    }
+    .contacto__header {
+        margin-right: 5vw;
+    }
+    .logo__contacto {
+        width: 80vw;
+        height: 20vw;
+    }
+    .logo img {
         width: 15vw;
+        height: 9vw;
     }
-    #header .contacto__header img {
-        width: 4vw;
-        height: 4vw;
+    .navbar{
+        width: 40vw;
     }
-    .contacto__menu .contacto__header img:hover {
-        width: 4.3vw;
-        height: 4.3vw;
-    }
-    #header .barra__nav li a{
-        font-size: 2.3vw;
-        color: black;
-        font-weight: bold;
-    }
+    .navbar-light .navbar-nav .nav-link {
+        color: #000;
+        font-size: 2vw;
+    } 
     .nuestras__sucursales {
         margin: 2vw;
     }
@@ -263,14 +291,38 @@ a {
     #footer {
         flex-direction: column;
     }
+    #footer .barra__nav__footer li a{
+        display: inline-block;
+        color: #000000;
+        font-size: 2.5vw;
+        padding: 0.5vw;
+    }
+    #footer .barra__nav__footer li a:hover {
+        opacity: 50%;
+        cursor: pointer;
+    }
+
 }
 @media screen and (max-width:481px){
     .body__nosotros {
-        grid-template-rows: 20vw 170vw 190vw 20vw;
+        grid-template-rows: 20vw 200vw 200vw 40vw;
+        gap: 35vw;
+    }
+    .nuestras__sucursales h2 {
+        font-size: 10vw;
+    }
+    .nuestras__sucursales h3 {
+        font-size: 7vw;
+    }
+    .nosotros h2 {
+        font-size: 10vw;
+    }
+    .sobre__nosotros p {
+        font-size: 4vw;
     }
     .sucursal__map{
-        height: 80vw;
-        width: 85vw;
+        height: 110vw;
+        width: 95vw;
     }
     .sobre__nosotros {
         height: 90vw;
@@ -279,15 +331,41 @@ a {
         font-size: 3vw;
         height: 40vw;
         line-height: 4vw;
+        align-items: center;
         
     }
     .segundo__parrafo {
         height: 60vw;
     }
-    .span{
-        font-size: 4vw;
+    .sobre__nosotros span{
+        font-size: 4.5vw;
     }
     .video__institucional {
         margin-top: 15vw;
+    }
+    #footer .copy{
+        color: #000000;
+        margin-right: 4vw;
+        display: inline-block;
+        justify-content: flex-start;
+    }
+    #footer .barra__nav__footer {
+        display: flex;
+        gap: 0.5vw;
+    }
+    #footer .barra__nav__footer li a{
+        font-size: 3.5vw;
+        padding: 0.5vw;
+    }
+    .contacto__footer{
+        display: flex;
+        gap: 1.5vw;
+    }
+    .bi {
+        font-size: 5vw;
+        color: black;
+    }
+    .bi:hover {
+        font-size: 3.2vw;
     }
 }

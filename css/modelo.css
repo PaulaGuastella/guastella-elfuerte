@@ -23,35 +23,75 @@ a {
     "header"
     "menu"
     "footer";
-    grid-template-rows: 10vw auto 10vw;
+    grid-template-rows: 15vw auto 10vw;
     grid-template-columns: 100%;
 }
 /* seccion header */
 #header {
     grid-area: header;
-    width: 100%;
-    gap: 5px;
+    background: linear-gradient(to right,#ffffff,#987965 );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.logo__contacto{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background: linear-gradient(to right,#ffffff,#987965 );
+    height: 10vw;
 }
-/* estilos del logo */
-.logo__header {
-    width: 30%;
-    height: 5vw;
+.logo {
+    width: 15vw;
     align-self: center;
-    margin-left: 5vh;
+    margin-left: 3vw;
 }
-.logo__header img{
-    width: 13vw;
+.logo img {
+    width: 10vw;
+    height: 7vw;
+}
+.contacto__header{
+    display: flex;
+    gap: 1.5vw;
+    width: 20vw;
+    align-items: center;
+}
+.bi {
+    font-size: 3vw;
+    color: black;
+}
+.bi:hover {
+    font-size: 3.2vw;
+    color: black;
+    opacity: 50%;
+}
+/* NAV BAR */
+.navbar-collapse{
+    justify-content: end;
+    width: 100%;
+    padding: 0%;
+}
+.navbar-nav{
+    background: linear-gradient(to right,#ffffff,#987965 );
+    width: 100%;
+    margin: 0;
+    padding: 0;
+} 
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+    font-size: 1.3vw;
+    margin: 0.5vw;
+} 
+.navbar-light .navbar-nav .nav-link.active {
+    color:#000;
+    font-weight: bold;
 }
 /* estilos de los enlaces a redes sociales */
 .contacto__menu{
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
-    width: 60%;
+    width: 25%;
 }
 .contacto__menu .contacto__header {
     align-self: flex-end;
@@ -61,41 +101,13 @@ a {
 .contacto__menu .contacto__header img {
     width: 3.2vw;
     height: 3.2vw;
-    margin: 1vw;
+    margin: 2vw;
 }
 .contacto__menu .contacto__header img:hover {
     opacity: 50%;
     cursor: pointer;
     width: 4vw;
     height: 4vw;
-}
-/* menú de navegación */
-.menu__navegacion {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.menu__navegacion .barra__nav{
-    display: flex;
-    justify-content: flex-end;
-    align-content: flex-end;
-    margin-right: 2vw;
-    
-}
-.menu__navegacion .barra__nav a{
-    color: white;
-    padding: 0.8vw;
-    text-transform: uppercase;
-    font-size: 1.4vw;
-    display: inline-block;
-    transition: all 560ms;
-}
-.menu__navegacion .barra__nav a:hover {
-    opacity: 50%;
-    cursor: pointer;
-    color: #000000;
-    font-weight: bold;
-    font-size: 1.8vw;
 }
 /* modelos */
 .menu__modelos {
@@ -106,6 +118,7 @@ a {
     text-align: center;
     background: linear-gradient(to buttom,#987965,#789a23 );
     color: #ffffff;
+    text-shadow: 2px 2px 2px #000;
     height: 10vw;
     font-size: 5vw;
     text-transform: uppercase;
@@ -169,19 +182,42 @@ a {
     opacity: 50%;
     cursor: pointer;
 }
-.contacto__footer img{
-    width: 6vh;
-    margin: 1vw;
+.contacto__footer{
+    display: flex;
+    gap: 1.5vw;
 }
-.contacto__footer img:hover {
+.bi {
+    font-size: 3vw;
+    color: black;
+}
+.bi:hover {
+    font-size: 3.2vw;
+    color: black;
     opacity: 50%;
-    cursor: pointer;
-    width: 8vh;
 }
 @media screen and (max-width: 768px) {
     .body__modelos {
         grid-template-rows: 20vw 430vw 20vw;
+        gap: 18vw;
     }
+    #header {
+        flex-direction: row-reverse;
+    }
+    .logo__contacto {
+        width: 60vw;
+        height: 20vw;
+    }
+    .logo img {
+        width: 17vw;
+        height: 10vw;
+    }
+    .navbar{
+        width: 40vw;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: #000;
+        font-size: 2vw;
+    } 
     .menu__modelos h2{
         font-size: 6.5vw;
     }
@@ -216,7 +252,8 @@ a {
 }
 @media screen and (max-width:481px){
     .body__modelos {
-        grid-template-rows: 25vw 330vw 25vw;
+        grid-template-rows: 30vw 330vw 25vw;
+        gap: 25vw;
     }
     .menu__modelos h2{
         font-size: 4.5vw;

@@ -268,7 +268,7 @@ a {
 /* tamaño tablet */
 @media screen and (max-width: 768px) {
     #body__index {
-        grid-template-rows: 18vw 130vw 80vw 30vw;
+        grid-template-rows: 30vw 130vw 80vw 30vw;
         gap: 10vw;
     }
     #header {
@@ -282,6 +282,13 @@ a {
         width: 17vw;
         height: 10vw;
     }
+    .navbar {
+        width: 30vw;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: #ffffff;
+        font-size: 2vw;
+    } 
     #presentacion__empresa {
         flex-direction: column;
         height: 90vw;
@@ -323,7 +330,7 @@ a {
 /* tamaño celular */
 @media screen and (max-width:481px) {
     #body__index{
-        grid-template-rows: 20vw 100vw 320vw 30vw;
+        grid-template-rows: 40vw 100vw 320vw 30vw;
         grid-template-columns: 100%;
         margin: 0;
     }
@@ -350,21 +357,13 @@ a {
         color: black;
         opacity: 50%;
     }
-    #header .contacto__menu .menu__navegacion .barra__nav{
-        height: 3vw;
-        width: 10vw;
+    .navbar {
+        width: 40vw;
     }
-    #header .contacto__menu .menu__navegacion a{
-        font-size: 2.5vw;
-        color: black;
-        font-weight: bold;
-        padding: 3vw;
-    }
-    #header .contacto__menu .menu__navegacion a:hover{
-        font-size: 3vw;
+    .navbar-light .navbar-nav .nav-link {
         color: #ffffff;
-        font-weight: bold;
-    }
+        font-size: 2.2vw;
+    } 
     #presentacion__empresa {
         height: 100vw;
         align-items:center;

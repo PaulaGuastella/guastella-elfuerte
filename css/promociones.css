@@ -25,33 +25,74 @@ a {
     "menu"
     "footer";
     grid-template-columns: 100%;
-    grid-template-rows: 10vw 180vw 10vw;
+    grid-template-rows: 15vw 180vw 10vw;
 }
 /* seccion header */
 #header {
     grid-area: header;
-    gap: 5px;
+    background: linear-gradient(to right,#987965,#ffffff );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.logo__contacto{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background: linear-gradient(to right,#ffffff,#987965 );
+    height: 10vw;
 }
-/* estilos del logo */
-.logo__header {
-    width: 30%;
-    height: 5vw;
+.logo {
+    width: 15vw;
     align-self: center;
-    margin-left: 5vh;
+    margin-left: 3vw;
 }
-.logo__header img{
-    width: 13vw;
+.logo img {
+    width: 10vw;
+    height: 7vw;
+}
+.contacto__header{
+    display: flex;
+    gap: 1.5vw;
+    width: 20vw;
+    align-items: center;
+}
+.bi {
+    font-size: 3vw;
+    color: black;
+}
+.bi:hover {
+    font-size: 3.2vw;
+    color: black;
+    opacity: 50%;
+}
+/* NAV BAR */
+.navbar-collapse{
+    justify-content: end;
+    width: 100%;
+    padding: 0%;
+}
+.navbar-nav{
+    background: linear-gradient(to right,#987965,#ffffff );
+    width: 100%;
+    margin: 0;
+    padding: 0;
+} 
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+    font-size: 1.3vw;
+    margin: 0.5vw;
+} 
+.navbar-light .navbar-nav .nav-link.active {
+    color:#000;
+    font-weight: bold;
 }
 /* estilos de los enlaces a redes sociales */
 .contacto__menu{
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
-    width: 60%;
+    width: 25%;
 }
 .contacto__menu .contacto__header {
     align-self: flex-end;
@@ -61,41 +102,13 @@ a {
 .contacto__menu .contacto__header img {
     width: 3.2vw;
     height: 3.2vw;
-    margin: 1vw;
+    margin: 2vw;
 }
 .contacto__menu .contacto__header img:hover {
     opacity: 50%;
     cursor: pointer;
     width: 4vw;
     height: 4vw;
-}
-/* menú de navegación */
-.menu__navegacion {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.menu__navegacion .barra__nav{
-    display: flex;
-    justify-content: flex-end;
-    align-content: flex-end;
-    margin-right: 2vw;
-    
-}
-.menu__navegacion .barra__nav a{
-    color: white;
-    padding: 0.8vw;
-    text-transform: uppercase;
-    font-size: 1.4vw;
-    display: inline-block;
-    transition: all 560ms;
-}
-.menu__navegacion .barra__nav a:hover {
-    opacity: 50%;
-    cursor: pointer;
-    color: #000000;
-    font-weight: bold;
-    font-size: 1.8vw;
 }
 /* promociones */
 .seccion__promocion {
@@ -146,14 +159,14 @@ a {
 #footer{
     grid-area: footer;
     height: 10vw;
-    background: linear-gradient(to right,#789a23,#987965 );
+    background: linear-gradient(to right,#987965,#ffffff );
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     align-content: flex-end;
 }
 #footer .copy{
-    color: #ffffff;
+    color: #000000;
     margin-right: 4vw;
     display: inline-block;
     justify-content: flex-start;
@@ -164,41 +177,52 @@ a {
 }
 #footer .barra__nav__footer li a{
     display: inline-block;
-    color: #ffffff;
+    color: #000000;
     padding: 0.5vw;
 }
 #footer .barra__nav__footer li a:hover {
     opacity: 50%;
     cursor: pointer;
 }
-.contacto__footer img{
-    width: 6vh;
-    margin: 1vw;
+.contacto__footer{
+    display: flex;
+    gap: 1.5vw;
 }
-.contacto__footer img:hover {
+.bi {
+    font-size: 3vw;
+    color: black;
+}
+.bi:hover {
+    font-size: 3.2vw;
+    color: black;
     opacity: 50%;
-    cursor: pointer;
-    width: 8vh;
 }
 @media screen and (max-width: 768px) {
     #body__promo{
-        grid-template-rows: 20vw 560vw 20vw;
+        grid-template-rows: 20vw 620vw 30vw;
+        gap: 10vw;
     }
-    .contacto__menu .contacto__header img {
-        width: 5vw;
-        height: 5vw;
+    #header {
+        flex-direction: row-reverse;
     }
-    .contacto__menu .contacto__header img:hover {
-        width: 6vw;
-        height: 6vw;
+    .contacto__header {
+        margin-right: 5vw;
     }
-    .menu__navegacion .barra__nav a{
+    .logo__contacto {
+        width: 80vw;
+        height: 20vw;
+    }
+    .logo img {
+        width: 15vw;
+        height: 9vw;
+    }
+    .navbar{
+        width: 40vw;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: #000;
         font-size: 2vw;
-        font-weight: bold;
-    }
-    .menu__navegacion .barra__nav a:hover {
-        font-size: 2.4vw;
-    }
+    } 
     .promo__caracteristicas{
         flex-direction: column;
         justify-content: center;
@@ -213,16 +237,26 @@ a {
     }
     .promo__texto{
         width: 80vw;
-        height: 50vw;
+        height: 60vw;
     }
-    #footer{
-        height: 20vw;
+    #footer {
+        height: 30vw;
         flex-direction: column;
+    }
+    #footer .barra__nav__footer li a{
+        display: inline-block;
+        color: #000000;
+        font-size: 2.5vw;
+        padding: 0.5vw;
+    }
+    #footer .barra__nav__footer li a:hover {
+        opacity: 50%;
+        cursor: pointer;
     }
 }
 @media screen and (max-width:481px) {
     #body__promo{
-        grid-template-rows: 20vw 690vw 30vw;
+        grid-template-rows: 30vw 690vw 30vw;
     }
     .logo__header img{
         width: 15vw;
@@ -254,7 +288,29 @@ a {
         width: 50vh;
         margin-left: 7vw;
     }
-    #footer {
-        height: 30vw;
+    #footer .copy{
+        color: #000000;
+        margin-right: 4vw;
+        display: inline-block;
+        justify-content: flex-start;
+    }
+    #footer .barra__nav__footer {
+        display: flex;
+        gap: 0.5vw;
+    }
+    #footer .barra__nav__footer li a{
+        font-size: 3.5vw;
+        padding: 0.5vw;
+    }
+    .contacto__footer{
+        display: flex;
+        gap: 1.5vw;
+    }
+    .bi {
+        font-size: 5vw;
+        color: black;
+    }
+    .bi:hover {
+        font-size: 3.2vw;
     }
 }
