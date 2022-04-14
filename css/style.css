@@ -30,6 +30,7 @@ a {
 }
 /* seccion header */
 #header {
+    grid-area: header;
     background: linear-gradient(to right,#789a23,#987965 );
     display: flex;
     flex-direction: column;
@@ -67,7 +68,7 @@ a {
     opacity: 50%;
 }
 /* NAV BAR */
- .navbar-collapse{
+.navbar-collapse{
     justify-content: end;
     width: 100%;
     padding: 0%;
@@ -114,57 +115,56 @@ a {
 /* SECCION PRESENTACION */
 #presentacion__empresa{
     grid-area: main;
-    height: 60vw;
+    height: 120vw;
     width: 100%;
-    gap: 0.8vw;
+    gap: 1vw;
     margin: 2vw 0.1vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content:space-evenly;
 }
-.foto__principal {
-    width: 70vw;
-    height: auto;
-}
-.foto__principal img{
-    width: 70vw;
-    height: auto;
-}
-.listado__fortalezas {
-    width: 30vw;
+.titulo__presentacion {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content:space-evenly;
+    gap: 2vw;
+    align-items: center;
 }
-.cada__fortaleza {
+.titulo__presentacion h1{
+    font-size: 4vw;
+    text-shadow: 2px 2px 2px #ffffff;
+}
+.titulo__presentacion h2{
+    font-size: 3vw;
+    text-shadow: 2px 2px 2px #ffffff;
+}
+.row {
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.col {
     display: flex;
     flex-direction: row;
     width: 20vw;
     height: 10vw ;
     margin:0.8vw 0.5vw;
     transition: all 1s;
-    opacity: 80%;
 }
-.cada__fortaleza:hover{
-    width: 23vw;
-    height: 11.5vw;
-    opacity: 100%;
-    cursor: pointer;
-}
-.cada__fortaleza p {
+.col p {
     background-color: #789a23;
     color: #ffffff;
     margin: 0.3vw;
     width: 50%;
-    font-size: 1.2vw;
+    font-size: 1.6vw;
 }
-.cada__fortaleza p:hover{
+.col p:hover{
     background-color: #192a38;
-    font-size: 1.4vw;
+    font-size: 1.8vw;
+    cursor: pointer;
 }
-.listado__fortalezas img {
-    width: 45%;
+.row img {
+    width: 30%;
     height: 100%;
 }
 
@@ -284,24 +284,12 @@ a {
     }
     #presentacion__empresa {
         flex-direction: column;
-        height: 120vw;
+        height: 90vw;
         justify-content: center;
         align-items: center;
+        gap: 2vw;
     }
-    #presentacion__empresa .foto__principal {
-        width: 100%;
-        margin: 2vw;
-    }
-    #presentacion__empresa .foto__principal img {
-        margin:  0 15vw;
-    }
-    #presentacion__empresa .listado__fortalezas {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    #presentacion__empresa .listado__fortalezas .cada__fortaleza{
-        opacity: 100%;
-    }
+
     #promociones {
         height: 80vw;
     }
@@ -335,7 +323,7 @@ a {
 /* tamaño celular */
 @media screen and (max-width:481px) {
     #body__index{
-        grid-template-rows: 20vw 300vw 360vw 30vw;
+        grid-template-rows: 20vw 100vw 320vw 30vw;
         grid-template-columns: 100%;
         margin: 0;
     }
@@ -348,10 +336,19 @@ a {
     #header .contacto__menu{
         width: 70%;
     }
-    #header .contacto__menu .contacto__header img{
-        align-self: center;
-        width: 8vw;
-        height: 8vw;
+    #header .contacto__header {
+        width: 25vw;
+        margin-right: 0.3vw;
+    }
+    .bi {
+        font-size: 4vw;
+        color: black;
+        margin: 0.5vw;
+    }
+    .bi:hover {
+        font-size: 4.2vw;
+        color: black;
+        opacity: 50%;
     }
     #header .contacto__menu .menu__navegacion .barra__nav{
         height: 3vw;
@@ -369,35 +366,13 @@ a {
         font-weight: bold;
     }
     #presentacion__empresa {
-        height: 300vw;
+        height: 100vw;
         align-items:center;
     }
-    #presentacion__empresa .foto__principal{
-        margin: 0;
-        width: 85vw;
-        border: 2vw solid black;
-        background-color: black;
+    .titulo__presentacion {
+        font-size: 10vw;
     }
-    #presentacion__empresa .foto__principal img{
-        align-content: center;
-        width: 80vw;
-        height: 80vw;
-        margin: 0;
-    }
-    #presentacion__empresa .listado__fortalezas {
-        display: flex;
-        flex-direction: row;
-        gap: 3vw;
-    }
-    #presentacion__empresa .listado__fortalezas .cada__fortaleza {
-        width: 40vw;
-        height: 25vw;
-    }
-    #presentacion__empresa .listado__fortalezas .cada__fortaleza p{
-        font-size: 3vw;
-        width: 60vw;
 
-    }
     #promociones {
         height: 330vw;
     }
