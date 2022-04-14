@@ -23,35 +23,75 @@ a {
     "main"
     "footer";
     grid-template-columns: 100%;
-    grid-template-rows: 10vw auto 10vw;
+    grid-template-rows: 15vw auto 10vw;
 
 }
 /* seccion header */
 #header {
     grid-area: header;
-    width: 100%;
-    gap: 1.5vw;
+    background: linear-gradient(to right,#789a23,#987965 );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.logo__contacto{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background: linear-gradient(to right,#ffffff,#987965 );
+    height: 10vw;
 }
-/* estilos del logo */
-.logo__header {
-    width: 30%;
-    height: 5vw;
+.logo {
+    width: 15vw;
     align-self: center;
-    margin-left: 5vh;
+    margin-left: 3vw;
 }
-.logo__header img{
-    width: 13vw;
+.logo img {
+    width: 10vw;
+    height: 7vw;
+}
+.contacto__header{
+    display: flex;
+    gap: 1.5vw;
+    width: 20vw;
+    align-items: center;
+}
+.bi {
+    font-size: 3vw;
+    color: black;
+}
+.bi:hover {
+    font-size: 3.2vw;
+    color: black;
+    opacity: 50%;
+}
+/* NAV BAR */
+.navbar-collapse{
+    justify-content: end;
+    width: 100%;
+    padding: 0%;
+}
+.navbar-nav{
+    background: linear-gradient(to right,#789a23,#987965 );
+    width: 100%;
+    margin: 0;
+    padding: 0;
+} 
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 1.3vw;
+    margin: 0.5vw;
+} 
+.navbar-light .navbar-nav .nav-link.active {
+    color:#ffffff;
+    font-weight: bold;
 }
 /* estilos de los enlaces a redes sociales */
 .contacto__menu{
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
-    width: 60%;
+    width: 25%;
 }
 .contacto__menu .contacto__header {
     align-self: flex-end;
@@ -61,7 +101,7 @@ a {
 .contacto__menu .contacto__header img {
     width: 3.2vw;
     height: 3.2vw;
-    margin: 1vw;
+    margin: 2vw;
 }
 .contacto__menu .contacto__header img:hover {
     opacity: 50%;
@@ -69,38 +109,11 @@ a {
     width: 4vw;
     height: 4vw;
 }
-/* menú de navegación */
-.menu__navegacion {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.menu__navegacion .barra__nav{
-    display: flex;
-    justify-content: flex-end;
-    align-content: flex-end;
-    margin-right: 2vw;
-    
-}
-.menu__navegacion .barra__nav a{
-    color: white;
-    padding: 0.8vw;
-    text-transform: uppercase;
-    font-size: 1.4vw;
-    display: inline-block;
-    transition: all 560ms;
-}
-.menu__navegacion .barra__nav a:hover {
-    opacity: 50%;
-    cursor: pointer;
-    color: #000000;
-    font-weight: bold;
-    font-size: 1.8vw;
-}
 /* Formulario */
 .main__contacto {
     grid-area: main;
     display: flex;
+    flex-direction: row;
     margin: 2vw;
     gap: 1vw;
 }
@@ -257,38 +270,65 @@ a {
     opacity: 50%;
     cursor: pointer;
 }
-.contacto__footer img{
-    width: 6vh;
-    margin: 1vw;
+.contacto__footer{
+    display: flex;
+    gap: 1.5vw;
 }
-.contacto__footer img:hover {
+.bi {
+    font-size: 3vw;
+    color: black;
+}
+.bi:hover {
+    font-size: 3.2vw;
+    color: black;
     opacity: 50%;
-    cursor: pointer;
-    width: 8vh;
 }
 /* responsive tablet celular */
 @media screen and (max-width: 768px){
     .body__contacto {
-        grid-template-rows: 20vw auto 20vw;
+        grid-template-rows: 20vw auto 35vw;
     }
-    #header .logo__header img {
-        width: 15vw;
+    #header {
+        flex-direction: row-reverse;
     }
-    #header .contacto__header img {
-        width: 4vw;
-        height: 4vw;
+    .logo__contacto {
+        width: 60vw;
+        height: 20vw;
     }
-    .contacto__menu .contacto__header img:hover {
-        width: 4.3vw;
-        height: 4.3vw;
+    .logo img {
+        width: 17vw;
+        height: 10vw;
     }
-    #header .barra__nav li a{
-        font-size: 2.3vw;
-        color: black;
+    .navbar {
+        width: 40vw;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: #ffffff;
+        font-size: 2vw;
+        margin: 0.5vw;
+    } 
+    .navbar-light .navbar-nav .nav-link.active {
         font-weight: bold;
     }
     .main__contacto {
         flex-direction: column;
+    }
+    #header .contacto__menu{
+        width: 70%;
+    }
+    #header .contacto__header {
+        width: 25vw;
+        margin-right: 0.3vw;
+    }
+    .bi {
+        font-size: 4vw;
+        color: black;
+        margin: 0.5vw;
+    }
+    .bi:hover {
+        font-size: 4.2vw;
+        color: black;
+        opacity: 50%;
     }
     
     .datos__personales input {
@@ -304,5 +344,6 @@ a {
         width: 60vw;
         margin-left: 4vw;
     }
+    
 }
 
