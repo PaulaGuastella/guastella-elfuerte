@@ -33,7 +33,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
 .logo__contacto{
     display: flex;
@@ -137,22 +136,30 @@ a {
     width: 50vw;
     height: 100%;
 }
-
 .caracteristicas__modelo {
     background-image: url('../img/modelos__caracteristicas.jpeg');
     width: 40vw;
     border: 0.3vw solid beige;
+    opacity: 95%;
 }
 .caracteristicas__modelo h4 {
     text-align: center;
     color: #ffffff;
     font-size: 2.5vw;
+    text-shadow: 2px 2px 2px #000;
+    opacity: 100%;
 }
 .especificaciones {
     color: #ffffff;
+    opacity: 100%;
+    text-shadow: 1.5px 1.5px 1.5px #000;
     margin-left: 1vw;
     padding: 2vw;
     font-size: 1.5vw;
+    gap: 2.2vw;
+}
+.especificaciones li {
+    list-style: circle;
 }
 /* FOOTER */
 #footer{
@@ -248,7 +255,6 @@ a {
     #footer{
         flex-direction: column;
     }
-    
 }
 @media screen and (max-width:481px){
     .body__modelos {

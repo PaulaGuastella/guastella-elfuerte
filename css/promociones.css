@@ -34,7 +34,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
 .logo__contacto{
     display: flex;
@@ -138,10 +137,10 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 .promo__texto h2{
     margin: 2vw auto;
+    text-shadow: 1px 1px 1px #ffffff;;
 }
 .promo__texto li {
     list-style: url('../img/tilde.png');

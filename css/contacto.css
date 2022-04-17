@@ -24,7 +24,6 @@ a {
     "footer";
     grid-template-columns: 100%;
     grid-template-rows: 15vw auto 10vw;
-
 }
 /* seccion header */
 #header {
@@ -33,7 +32,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
 .logo__contacto{
     display: flex;
@@ -127,6 +125,7 @@ a {
     margin: 2vw;
     text-align: center;
     text-transform: uppercase;
+    text-shadow: 1px 1px 1px #ffffff;
 }
 /* datos personales */
 .contenedor__datos__personales {
@@ -173,7 +172,6 @@ a {
     align-items: flex-start;
     justify-items: auto;
 }
-
 .opciones__tipologias {
     display: flex;
     justify-content: flex-start;
@@ -181,7 +179,6 @@ a {
     gap: 1vw;
     padding: 0.2vw;
 }
-
 .opciones__tipologias input {
     background-color: aquamarine;
 }
@@ -223,11 +220,17 @@ a {
 .boton__enviar input:hover{
     opacity: 80%;
 }
+.boton__enviar input:visited{
+    color: gray;
+}
 .boton__borrar input{
     background-color: #ea4322;
 }
 .boton__borrar input:hover{
     opacity: 50%;
+}
+.boton__borrar input:visited{
+    color: gray;
 }
 /* Imagenes */
 .imagen__contacto {
@@ -326,7 +329,6 @@ a {
         color: black;
         opacity: 50%;
     }
-    
     .datos__personales input {
         width: 50vw;
         margin-left: 4vw;
@@ -340,6 +342,5 @@ a {
         width: 60vw;
         margin-left: 4vw;
     }
-    
 }
 

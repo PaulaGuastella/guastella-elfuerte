@@ -33,7 +33,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
 .logo__contacto{
     display: flex;
@@ -124,7 +123,6 @@ a {
     font-size: 5vw;
     letter-spacing: 0.3vw;
 }
-
 .nuestras__sucursales h3{
     color: #000000;
     text-shadow: 2px 2px 2px #ffffff;
@@ -241,7 +239,7 @@ a {
 @media screen and (max-width: 768px) {
     .body__nosotros {
         grid-template-rows: 20vw 155vw 120vw 25vw;
-        grid-template-column: 100%;
+        grid-template-columns: 100%;
         gap: 15vw;
     }
     #header {
@@ -301,11 +299,10 @@ a {
         opacity: 50%;
         cursor: pointer;
     }
-
 }
 @media screen and (max-width:481px){
     .body__nosotros {
-        grid-template-rows: 20vw 200vw 200vw 40vw;
+        grid-template-rows: 20vw 200vw 230vw 35vw;
         gap: 35vw;
     }
     .nuestras__sucursales h2 {

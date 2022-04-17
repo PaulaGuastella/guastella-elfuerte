@@ -35,7 +35,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
 .logo__contacto{
     display: flex;
@@ -111,7 +110,6 @@ a {
     width: 4vw;
     height: 4vw;
 }
-
 /* SECCION PRESENTACION */
 #presentacion__empresa{
     grid-area: main;
@@ -141,7 +139,6 @@ a {
     width: 80vw;
     display: flex;
     justify-content: space-evenly;
-
 }
 .col {
     display: flex;
@@ -174,7 +171,6 @@ a {
     height: 30vw;
     margin-bottom: 5vw;
 }
-
 #promociones h2 {
     text-align: center;
     font-size: 3vw;
@@ -182,7 +178,6 @@ a {
     height: 5vw;
     margin-top: 0.5vw;
 }
-
 #promociones h2 a {
     color: #ffffff;
     transition: all 1.5s;
@@ -213,14 +208,11 @@ a {
     width: 25vw;
     height: 25vw;
     border:0.7vw solid #987965;
-
 }
-
 .promocion img {
     width: 100%;
     transition: all 1s;
 }
-
 /* FOOTER */
 #footer{
     grid-area: footer;
@@ -296,7 +288,6 @@ a {
         align-items: center;
         gap: 2vw;
     }
-
     #promociones {
         height: 80vw;
     }
@@ -325,7 +316,6 @@ a {
     #footer .contacto__footer i {
         font-size: 4vw;
     }
-
 }
 /* tamaño celular */
 @media screen and (max-width:481px) {
@@ -371,7 +361,6 @@ a {
     .titulo__presentacion {
         font-size: 10vw;
     }
-
     #promociones {
         height: 330vw;
     }
